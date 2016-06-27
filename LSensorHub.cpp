@@ -61,9 +61,9 @@ void LSensorHubClass::GetAccData(long* x, long* y, long* z)
 		DataBuf[i++] = Wire.read();
     }
 	DataX |= DataBuf[7];
-	DataX <<= 24;
+	DataX <<= 8;
 	DataX |= DataBuf[6];
-	DataX <<= 16;
+	DataX <<= 8;
 	DataX |= DataBuf[5];
 	DataX <<= 8;
 	DataX |= DataBuf[4];
@@ -78,9 +78,9 @@ void LSensorHubClass::GetAccData(long* x, long* y, long* z)
 		DataBuf[i++] = Wire.read();
     }
 	DataY |= DataBuf[7];
-	DataY <<= 24;
+	DataY <<= 8;
 	DataY |= DataBuf[6];
-	DataY <<= 16;
+	DataY <<= 8;
 	DataY |= DataBuf[5];
 	DataY <<= 8;
 	DataY |= DataBuf[4];
@@ -95,9 +95,9 @@ void LSensorHubClass::GetAccData(long* x, long* y, long* z)
 		DataBuf[i++] = Wire.read();
     }
 	DataZ |= DataBuf[7];
-	DataZ <<= 24;
+	DataZ <<= 8;
 	DataZ |= DataBuf[6];
-	DataZ <<= 16;
+	DataZ <<= 8;
 	DataZ |= DataBuf[5];
 	DataZ <<= 8;
 	DataZ |= DataBuf[4];
@@ -124,9 +124,9 @@ void LSensorHubClass::GetLighData(unsigned long* lux)
     }
 	
 	Data32 |= DataBuf[7];
-	Data32 <<= 24;
+	Data32 <<= 8;
 	Data32 |= DataBuf[6];
-	Data32 <<= 16;
+	Data32 <<= 8;
 	Data32 |= DataBuf[5];
 	Data32 <<= 8;
 	Data32 |= DataBuf[4];
@@ -151,9 +151,9 @@ void LSensorHubClass::GetTempData(long* temp)
     }
 	
 	Data32 |= DataBuf[7];
-	Data32 <<= 24;
+	Data32 <<= 8;
 	Data32 |= DataBuf[6];
-	Data32 <<= 16;
+	Data32 <<= 8;
 	Data32 |= DataBuf[5];
 	Data32 <<= 8;
 	Data32 |= DataBuf[4];
