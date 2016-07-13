@@ -30,10 +30,6 @@ unsigned char LNFCClass::check_on_line(void)
 	Wire.beginTransmission(NFC_DEVICE_ADDR);
 	Wire.write(NFC_SCAN_ID);
 	Wire.endTransmission();
-	Wire.begin();
-	Wire.beginTransmission(NFC_DEVICE_ADDR);
-	Wire.write(0);
-	Wire.endTransmission();
 
 	for(i=0;i<6;i++)
 	{
