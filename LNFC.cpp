@@ -14,7 +14,7 @@
 
 #include "arduino.h"
 #include "LNFC.h"
-#include "wire.h"
+#include "Wire.h"
 
 
 unsigned char uid[10] = {0};

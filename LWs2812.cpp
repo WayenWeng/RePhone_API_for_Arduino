@@ -14,7 +14,7 @@
 
 #include "arduino.h"
 #include "LWs2812.h"
-#include "wire.h"
+#include "Wire.h"
 
 
 void LWs2812Class::power_off()

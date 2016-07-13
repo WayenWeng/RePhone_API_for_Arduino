@@ -14,7 +14,7 @@
 
 #include "arduino.h"
 #include "LLedMatrix.h"
-#include "wire.h"
+#include "Wire.h"
 
 
 unsigned char LLedMatrixClass::check_on_line()
@@ -23,6 +23,7 @@ unsigned char LLedMatrixClass::check_on_line()
 	unsigned char i = 0;
 	Wire.begin();
 	Wire.beginTransmission(LEDAddress);
+    Wire.write(0);
 	Wire.endTransmission();
 	Wire.requestFrom(LEDAddress, 4);
 	while(Wire.available())

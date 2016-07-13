@@ -14,7 +14,7 @@
 
 #include "arduino.h"
 #include "LGPS.h"
-#include "wire.h"
+#include "Wire.h"
 
 
 unsigned char gps_utc_date_time[GPS_UTC_DATE_TIME_SIZE] = {0};
